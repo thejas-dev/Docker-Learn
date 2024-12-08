@@ -113,7 +113,7 @@ Docker and Docker Compose should be installed in your system. (Refer Official Do
 
 ### 1.Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/thejas-dev/Docker-Learn
 cd project-root
 ```
 
