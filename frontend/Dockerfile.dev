@@ -1,0 +1,15 @@
+FROM node:18
+
+WORKDIR /test-app-face
+
+COPY package.json /test-app-face/
+
+COPY src/ /test-app-face/src
+
+COPY public/ /test-app-face/public
+
+RUN npm install --prefer-offline
+
+EXPOSE 3000
+
+CMD ["npm","start"]
