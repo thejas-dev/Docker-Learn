@@ -2,9 +2,7 @@ version: "3"
 
 services:
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: thejashari/frontend-app
     ports:
       - "3001:80"
     depends_on:
@@ -13,9 +11,7 @@ services:
       - REACT_APP_BACKEND_URL=http://localhost:3333
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: thejashari/backend-app
     ports:
       - "3333:3333"
     depends_on:
