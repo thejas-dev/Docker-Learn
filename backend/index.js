@@ -4,6 +4,7 @@ const {validToken} = require('./utils/helpers');
 const cors = require('cors');
 const userRoutes = require('./routes/userRoutes');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
@@ -41,6 +42,7 @@ function authenticateUser(req, res, next) {
 }
 
 mongoose.connect(
+  process.env.MONGODB_URI ||
   'mongodb://mongo:27017/my_database'
 )
   .then(() => console.log('Connected!'))
